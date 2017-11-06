@@ -56,5 +56,31 @@ namespace projekt_miasto
 
             return result;
         }
+
+        public static string inputEmail(string inputText, bool isEmpty = false)
+        {
+            string result = "";
+            bool validation = false;
+            do
+            {
+                Console.Write(inputText);
+                result = Console.ReadLine();
+                
+
+                if (isEmpty) break;
+                else
+                {
+                    if (!new System.ComponentModel.DataAnnotations.EmailAddressAttribute().IsValid(result))
+                    {
+                        Console.WriteLine("Podany adres nie jest poprawny!\nPrawidłowy format adresu to np.: john@smith.com");
+                    }
+                    else validation = true;
+                    
+                }
+                
+            } while (!validation);
+
+            return result;
+        }
     }
 }
