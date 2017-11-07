@@ -82,5 +82,26 @@ namespace projekt_miasto
 
             return result;
         }
+
+        public static string inputPostCode(string inputText, bool isEmpty = false)
+        {
+            string result = "";
+            while (true)
+            {
+                Console.Write(inputText);
+                result = Console.ReadLine();
+
+                if (result.Length!=6) Console.WriteLine("Kod musi posiadać 6 znaków!");                
+                else if (result.Substring(2,1)!="-" && result.Length==6) Console.WriteLine("Nieprawidłowy format kodu! Poprawny format to 00-000");               
+                else
+                {
+                    uint postCodePart1, postCodePart2;
+                    if (uint.TryParse((result.Remove(2, 4)), out postCodePart1) && uint.TryParse((result.Remove(0, 3)), out postCodePart2)) break;
+                    else Console.WriteLine("W kodzie mogą znajdować się tylko znaki [0-9] oraz [-]!");
+                    
+                }
+            }
+            return result;
+        }
     }
 }

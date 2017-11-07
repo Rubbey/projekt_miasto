@@ -27,8 +27,8 @@ namespace projekt_miasto
             for (int i = 0; i < ListaInformacji.Count; ++i)
                 ListaInformacji[i].WyswietlInformacje();
 
-            
-           
+
+
             Console.ReadKey();
 
         }
