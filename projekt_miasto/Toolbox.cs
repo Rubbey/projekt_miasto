@@ -13,7 +13,7 @@ namespace projekt_miasto
         public static int inputInteger(string inputText,int min, int max)
         {
             int result = 0;
-
+            
             while (true)
             {
                 string liczba = Toolbox.inputString(inputText, false);
