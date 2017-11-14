@@ -35,13 +35,14 @@ abstract class Zwierzatko : IInformacje
                                                          
         public void UstawDane(string imie, int wiek)       //metoda UstawDane powinna być przeciążona dla kilku wariantów argumentów
         {                                                 //dodatkowo powinna zawierać sprawdzenia poprawności wprowadzanych danych
-            if (!string.IsNullOrEmpty(imie))
-                this.Imie = imie;
 
-            Toolbox.inputInteger(wiek, 0, 99);         //Użyć metod z Toolbox do sprawdzania poprawaności !!!
-                this.Wiek = wiek;
+            if (!string.IsNullOrEmpty(imie)) this.Imie = imie;              //tutaj sprawdzacz czy jako pierwszy argument jest podany ciąg znaków, jesli jest to przypisuje to jako imie
+            else this.Imie = Toolbox.inputString("Podaj imie: ", false);    //jesli nie, wywoluje metode inputString z Toolboxa i jej wynik prypisuje jako imie
+
+            if (wiek >= 0 && wiek <= 99) this.Wiek = wiek;                  //a tutaj sprawdzasz czy drugi argument jest w przedziale <0,99>, jesli tak przypisuje to jako wiek
+            else this.Wiek = Toolbox.inputInteger("Podaj wiek: ", 0, 99);   //jeśli nie, wywoluje metode inputInteger i jej wynik przypisuje jako wiek
         }
-
+        
         /*
             metody abstrakcyjne nie posiadają w klasie , w której zostały zdefioniowane swoich deklaracji - jedynie nagłówek
             każda klasa, która będzie dziedziczyła z klasy bazowej musi posiadać implementacje tych metod
