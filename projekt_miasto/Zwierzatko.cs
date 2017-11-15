@@ -20,7 +20,8 @@ abstract class Zwierzatko : IInformacje
         public int Wiek { get; private set; }
         public RodzajZwierzatka Rodzaj { get; private set; }
 
-        public Zwierzatko()     //tutaj powinny znaleźć sie odpowiednie konstruktory
+
+        public Zwierzatko()                                 //tutaj powinny znaleźć sie odpowiednie konstruktory
         {
             this.Rodzaj = RodzajZwierzatka.BRAK_DANYCH;
             this.UstawDane(Toolbox.BRAK_DANYCH, 0);
@@ -31,20 +32,26 @@ abstract class Zwierzatko : IInformacje
             this.UstawDane(imie, wiek);
         }
 
+
         public void UstawDane()                             
         {
             this.Imie = Toolbox.inputString("Podaj imie: ", false);
             this.Wiek = Toolbox.inputInteger("Podaj wiek: ", 0, 99);
         }
 
-                                                         
-        public void UstawDane(string imie, int wiek)       //metoda UstawDane powinna być przeciążona dla kilku wariantów argumentów
-        {                                                 //dodatkowo powinna zawierać sprawdzenia poprawności wprowadzanych danych
-            if (!string.IsNullOrEmpty(imie))
-                this.Imie = imie;
+        public void UstawDane(string imie)                        
+        {                                                                  
+            if (!string.IsNullOrEmpty(imie)) this.Imie = imie;
+            else this.Imie = Toolbox.inputString("Podaj imie: ", false);
+        }
 
-            Toolbox.inputInteger(wiek, 0, 99);         //Użyć metod z Toolbox do sprawdzania poprawaności !!!
-                this.Wiek = wiek;
+        public void UstawDane(string imie, int wiek)                        //metoda UstawDane powinna być przeciążona dla kilku wariantów argumentów
+        {                                                                  //dodatkowo powinna zawierać sprawdzenia poprawności wprowadzanych danych
+            if (!string.IsNullOrEmpty(imie)) this.Imie = imie;
+            else this.Imie = Toolbox.inputString("Podaj imie: ", false);
+
+            if (wiek >= 0 && wiek <= 99) this.Wiek = wiek;
+            else this.Wiek = Toolbox.inputInteger("Podaj wiek: ", 0, 99);
         }
 
         /*
