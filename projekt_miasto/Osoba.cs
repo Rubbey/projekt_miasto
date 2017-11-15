@@ -33,6 +33,17 @@ namespace projekt_miasto
             this.UstawDane(imie, nazwisko);
         }
 
+
+        public void UstawDane(string imie, int wiek)
+        {
+            this.UstawDane(imie, wiek);
+        }
+
+        public void UstawDane(string imie, string plec,string adres)
+        {
+            this.UstawDane(imie, plec, adres);
+        }
+
         public void UstawDane(string imie, string nazwisko)
         {
             if (!string.IsNullOrEmpty(imie))
@@ -41,6 +52,7 @@ namespace projekt_miasto
             if (!string.IsNullOrEmpty(nazwisko))
                 this.Nazwisko = nazwisko;
         }
+
        
         public static Osoba StworzOsobe()
         {

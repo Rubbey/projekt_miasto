@@ -31,6 +31,27 @@ namespace projekt_miasto
             this.NrDomu = nrDomu;
         }
 
+        public void UstawDane(string ulica, string miasto)
+        {
+            this.Ulica = ulica;
+            this.Miasto = miasto;
+        }
+
+        public void UstawDane(string ulica, string miasto, string kodPocztowy)
+        {
+            if (!string.IsNullOrEmpty(ulica))
+                this.Ulica = ulica;
+
+            if (!string.IsNullOrEmpty(miasto))
+                this.Miasto = miasto;
+
+            if (!string.IsNullOrEmpty(kodPocztowy))
+                this.KodPocztowy = kodPocztowy;
+
+        }
+
+
+
         public void WyswietlInformacje()
         {
             Console.WriteLine("{0} {1}\n{2} {3}", this.Ulica, this.NrDomu, this.KodPocztowy, this.Miasto);
