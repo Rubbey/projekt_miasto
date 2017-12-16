@@ -37,7 +37,7 @@ namespace projekt_miasto.Motoryzacja
             double liczbaMozliwychDoPrzejechaniaKilometrow = zbiornikPaliwa.IloscPaliwa / ZuzyciePaliwa;
             if (liczbaKilometrow > liczbaMozliwychDoPrzejechaniaKilometrow)
             {
-                Console.WriteLine("Nie ma wystarczającej ilości paliwa na przejechanie całego dystansu!\nJadę ile sie da [{}km]! ", (int)liczbaMozliwychDoPrzejechaniaKilometrow);
+                Console.WriteLine("Nie ma wystarczającej ilości paliwa na przejechanie całego dystansu!\nJadę ile sie da [{0}km]! ", (int)liczbaMozliwychDoPrzejechaniaKilometrow);
                 this.LiczbaPrzejechanychKilometrow += (long)liczbaMozliwychDoPrzejechaniaKilometrow;
                 return (long)liczbaMozliwychDoPrzejechaniaKilometrow; ;
             }
