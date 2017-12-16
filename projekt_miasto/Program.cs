@@ -1,4 +1,7 @@
-﻿using System;
+﻿using projekt_miasto.Motoryzacja;
+using projekt_miasto.Motoryzacja.Samochody.ModelePojazdow;
+using projekt_miasto.Motoryzacja.Silniki;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,26 +13,12 @@ namespace projekt_miasto
     {
         static void Main(string[] args)
         {
-            /*
-            Miasto miasto = new Miasto();
-            miasto.uzupelnijMiasto();
-            miasto.wyswietlDaneOsob();            
-            Console.ReadKey();
-            */
+            Osoba Ja = Osoba.StworzOsobe(); 
+            Ja.KupPojazd(new BMWX5());
+            Ja.Samochody.ElementAt(0).ZbiornikPaliwa.Dotankuj();
+            Ja.Samochody.ElementAt(0).JedziemyWSinaDal();
 
-           
-
-            List<IInformacje> ListaInformacji = new List<IInformacje>();
-
-            ListaInformacji.Add(new Osoba("Jacek", "Kuźmicz"));
-            ListaInformacji.Add(new Adres("", "", "", 5));
-
-            for (int i = 0; i < ListaInformacji.Count; ++i)
-                ListaInformacji[i].WyswietlInformacje();
-                        
-
-            Console.ReadKey();
-
+            Console.ReadLine();
         }
     }
 }

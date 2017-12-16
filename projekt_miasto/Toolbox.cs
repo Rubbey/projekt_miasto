@@ -18,7 +18,7 @@ namespace projekt_miasto
             {
                 string liczba = Toolbox.inputString(inputText, false);
 
-                result = int.Parse(liczba);
+                //result = int.Parse(liczba);
 
                 if (!int.TryParse(liczba, out result) ||
                     (result < min || result > max))
@@ -29,6 +29,28 @@ namespace projekt_miasto
                     break;        
             }
             
+            return result;
+        }
+
+        public static double inputDouble(string inputText, double min, double max)
+        {
+            double result = 0.0f;
+
+            while (true)
+            {
+                string liczba = Toolbox.inputString(inputText, false);
+
+                result = double.Parse(liczba);
+
+                if (!double.TryParse(liczba, out result) ||
+                    (result < min || result > max))
+                {
+                    Console.WriteLine("Wprowadzono niepoprawna wartosc (Zakres {0} {1})", min, max);
+                }
+                else
+                    break;
+            }
+
             return result;
         }
 

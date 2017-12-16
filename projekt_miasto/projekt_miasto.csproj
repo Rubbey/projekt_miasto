@@ -22,6 +22,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <UseVSHostingProcess>true</UseVSHostingProcess>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -47,6 +48,31 @@
     <Compile Include="Adres.cs" />
     <Compile Include="IInformacje.cs" />
     <Compile Include="Miasto.cs" />
+    <Compile Include="Motoryzacja\Pojazd.cs" />
+    <Compile Include="Motoryzacja\Samochody\MarkiPojazdow\BmwMotocykle.cs" />
+    <Compile Include="Motoryzacja\Samochody\MarkiPojazdow\BmwOsobowe.cs" />
+    <Compile Include="Motoryzacja\Samochody\MarkiPojazdow\BmwTerenowe.cs" />
+    <Compile Include="Motoryzacja\Samochody\MarkiPojazdow\JaguarOsobowe.cs" />
+    <Compile Include="Motoryzacja\Samochody\MarkiPojazdow\JaguarTerenowe.cs" />
+    <Compile Include="Motoryzacja\Samochody\MarkiPojazdow\OpelCiezarowe.cs" />
+    <Compile Include="Motoryzacja\Samochody\MarkiPojazdow\OpelOsobowe.cs" />
+    <Compile Include="Motoryzacja\Samochody\ModelePojazdow\BMW320.cs" />
+    <Compile Include="Motoryzacja\Samochody\ModelePojazdow\BMWGS.cs" />
+    <Compile Include="Motoryzacja\Samochody\ModelePojazdow\BMWX5.cs" />
+    <Compile Include="Motoryzacja\Samochody\ModelePojazdow\JaguarFpeace.cs" />
+    <Compile Include="Motoryzacja\Samochody\ModelePojazdow\JaguarXF.cs" />
+    <Compile Include="Motoryzacja\Samochody\ModelePojazdow\OpelAstra.cs" />
+    <Compile Include="Motoryzacja\Samochody\ModelePojazdow\OpelVivaro.cs" />
+    <Compile Include="Motoryzacja\Samochody\TypyPojazdow\Jednoslady.cs" />
+    <Compile Include="Motoryzacja\Samochody\TypyPojazdow\SamochodyCiezarowe.cs" />
+    <Compile Include="Motoryzacja\Samochody\TypyPojazdow\SamochodyOsobowe.cs" />
+    <Compile Include="Motoryzacja\Samochody\TypyPojazdow\SamochodyTerenowe.cs" />
+    <Compile Include="Motoryzacja\Silnik.cs" />
+    <Compile Include="Motoryzacja\Silniki\SilnikBenzynowy.cs" />
+    <Compile Include="Motoryzacja\Silniki\SilnikDiesela.cs" />
+    <Compile Include="Motoryzacja\Silniki\SilnikParowy.cs" />
+    <Compile Include="Motoryzacja\Silniki\SilnikWankla.cs" />
+    <Compile Include="Motoryzacja\ZbiornikPaliwa.cs" />
     <Compile Include="Osoba.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -57,6 +83,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

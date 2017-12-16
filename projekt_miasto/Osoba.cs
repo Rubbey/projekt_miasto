@@ -1,4 +1,5 @@
-﻿using System;
+﻿using projekt_miasto.Motoryzacja;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,38 @@ namespace projekt_miasto
         public RodzajPlci Plec { get; private set; }
         public Adres Adres { get; private set; }
 
+        public List<Pojazd> Samochody = new List<Pojazd>();
+
+        public void KupPojazd(Pojazd pojazd)
+        {
+            Samochody.Add(pojazd);
+        }
+
+        public Pojazd SprzedajPojazd(int i_indeksPojazdu)
+        {
+            while (i_indeksPojazdu < 0 || i_indeksPojazdu >= Samochody.Count)
+            {
+                Console.WriteLine("Nie ma Pojazdu o podanym indeksie!");
+                SprzedajPojazd(Toolbox.inputInteger("Podaj indeks Pojazdu", 0, Samochody.Count));
+            }
+
+            Pojazd TempPojazd = Samochody.ElementAt(i_indeksPojazdu);
+            Samochody.RemoveAt(i_indeksPojazdu);
+            return TempPojazd;
+        }
+
+        public Pojazd PobierzPojazd(int i_indeksPojazdu)
+        {
+            while (i_indeksPojazdu < 0 || i_indeksPojazdu >= Samochody.Count)
+            {
+                Console.WriteLine("Nie ma Pojazdu o podanym indeksie!");
+                PobierzPojazd(Toolbox.inputInteger("Podaj indeks Pojazdu", 0, Samochody.Count));
+            }
+
+            return Samochody.ElementAt(i_indeksPojazdu);            
+        }
+
+
         public Osoba()
         {
 
@@ -39,7 +72,7 @@ namespace projekt_miasto
             this.UstawDane(imie, wiek);
         }
 
-        public void UstawDane(string imie, string plec,string adres)
+        public void UstawDane(string imie, string plec, string adres)
         {
             this.UstawDane(imie, plec, adres);
         }
@@ -60,13 +93,13 @@ namespace projekt_miasto
 
             Console.WriteLine("=== wprowadz dane nowej osoby ===");
 
-            result.UstawDane(Toolbox.inputString("Podaj imie:", true),
-                            Toolbox.inputString("Podaj nazwisko:", false));
+            result.UstawDane(Toolbox.inputString("Podaj imie: ", true),
+                            Toolbox.inputString("Podaj nazwisko: ", false));
 
-            result.Adres.UstawDane(Toolbox.inputString("Podaj ulice:", false),
-                                  Toolbox.inputString("Podaj miasto:", false),
-                                  Toolbox.inputString("Podaj kod pocztowy:", false),
-                                  Toolbox.inputInteger("Podaj nr domu:", 1, int.MaxValue));
+            result.Adres.UstawDane(Toolbox.inputString("Podaj ulice: ", false),
+                                  Toolbox.inputString("Podaj miasto: ", false),
+                                  Toolbox.inputPostCode("Podaj kod pocztowy: ", false),
+                                  Toolbox.inputInteger("Podaj nr domu: ", 1, int.MaxValue));
 
             return result;
         }
