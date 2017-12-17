@@ -1,4 +1,5 @@
 ﻿using projekt_miasto.Motoryzacja.Samochody.MarkiPojazdow;
+using projekt_miasto.Motoryzacja.Silniki;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,18 +8,17 @@ using System.Threading.Tasks;
 
 namespace projekt_miasto.Motoryzacja.Samochody.ModelePojazdow
 {
-    class JaguarFpeace : JaguarTerenowe, IInformacje
+    class JaguarFpeace : JaguarTerenowe
     {
-        public string ModelPojazdu { get; private set; }
-
-        public JaguarFpeace()
+        public JaguarFpeace() : base()
         {
-            this.ModelPojazdu = "F-Peace";
+            base.Silnik = new SilnikBenzynowy(5.2);
+            base.ZbiornikPaliwa = new ZbiornikPaliwa(120);
         }
 
         public override string Model()
         {
-            return this.ModelPojazdu;
+            return "F-Peace";
         }
     }
 }

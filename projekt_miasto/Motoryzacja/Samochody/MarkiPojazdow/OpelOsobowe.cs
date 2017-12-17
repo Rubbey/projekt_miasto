@@ -7,17 +7,15 @@ using System.Threading.Tasks;
 
 namespace projekt_miasto.Motoryzacja.Samochody.MarkiPojazdow
 {
-    abstract class OpelOsobowe : SamochodyOsobowe, IInformacje
+    abstract class OpelOsobowe : SamochodyOsobowe
     {
-        public string MarkaPozadzu { get; private set; }
-
-        public OpelOsobowe()
+        public OpelOsobowe() : base()
         {
-            this.MarkaPozadzu = "Opel";
         }
+
         public override string Marka()
         {
-            return this.MarkaPozadzu;
+            return "Opel";
         }
 
     }

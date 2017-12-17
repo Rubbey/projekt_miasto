@@ -7,18 +7,15 @@ using System.Threading.Tasks;
 
 namespace projekt_miasto.Motoryzacja.Samochody.MarkiPojazdow
 {
-    abstract class JaguarOsobowe : SamochodyOsobowe, IInformacje
+    abstract class JaguarOsobowe : SamochodyOsobowe
     {
-        public string MarkaPozadzu { get; private set; }
-        
-        public JaguarOsobowe()
+        public JaguarOsobowe() : base()
         {
-            this.MarkaPozadzu = "Jaguar";
         }
 
         public override string Marka()
         {
-            return this.MarkaPozadzu;
+            return "Jaguar";
         }
 
     }

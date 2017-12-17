@@ -10,8 +10,7 @@ namespace projekt_miasto
     {
         private static Zwierzyniec o_instancja = null;
         private List<Zwierzatko> o_listaZwierzatek;
-
-        //tutaj powinny znaleźć sie odpowiedni konstruktor
+       
         public Zwierzyniec()
         {
             o_listaZwierzatek = new List<Zwierzatko>();
@@ -57,7 +56,7 @@ namespace projekt_miasto
             Console.WriteLine("Dostępne Zwierzaki:");
             foreach (Zwierzatko Zwierz in o_listaZwierzatek)
             {
-                Console.WriteLine("Nr: {0}\t Zwierzak: {1}", o_listaZwierzatek.IndexOf(Zwierz), Zwierz.Imie);
+                Console.WriteLine("Nr: {0}", o_listaZwierzatek.IndexOf(Zwierz));
                 Zwierz.WyswietlInformacje();
             }                        
         }

@@ -7,18 +7,15 @@ using System.Threading.Tasks;
 
 namespace projekt_miasto.Motoryzacja.Samochody.MarkiPojazdow
 {
-    abstract class BmwOsobowe : SamochodyOsobowe, IInformacje
+    abstract class BmwOsobowe : SamochodyOsobowe
     {
-        public string MarkaPozadzu { get; private set; }
-
-        public BmwOsobowe()
+        public BmwOsobowe() : base()
         {
-            this.MarkaPozadzu = "BMW";
         }
 
         public override string Marka()
         {
-            return this.MarkaPozadzu;
+            return "BMW";
         }
 
     }

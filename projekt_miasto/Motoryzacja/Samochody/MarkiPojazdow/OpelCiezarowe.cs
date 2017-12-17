@@ -7,17 +7,15 @@ using System.Threading.Tasks;
 
 namespace projekt_miasto.Motoryzacja.Samochody.MarkiPojazdow
 {
-    abstract class OpelCiezarowe : SamochodyCiezarowe, IInformacje
+    abstract class OpelCiezarowe : SamochodyCiezarowe
     {
-        public string MarkaPozadzu { get; private set; }
-
-        public OpelCiezarowe()
+        public OpelCiezarowe() : base()
         {
-            this.MarkaPozadzu = "Opel";
         }
+
         public override string Marka()
         {
-            return this.MarkaPozadzu;
+            return "Opel";
         }
 
     }

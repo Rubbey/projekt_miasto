@@ -1,4 +1,5 @@
 ﻿using projekt_miasto.Motoryzacja.Samochody.MarkiPojazdow;
+using projekt_miasto.Motoryzacja.Silniki;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,18 +8,17 @@ using System.Threading.Tasks;
 
 namespace projekt_miasto.Motoryzacja.Samochody.ModelePojazdow
 {
-    class BMWGS : BmwMotocykle, IInformacje
+    class BMWGS : BmwMotocykle
     {
-        public string ModelPojazdu { get; private set; }
-
-        public BMWGS()
+        public BMWGS() : base()
         {
-            this.ModelPojazdu = "GS";
+            base.Silnik = new SilnikBenzynowy(1.8);
+            base.ZbiornikPaliwa = new ZbiornikPaliwa(25);
         }
 
         public override string Model()
         {
-            return this.ModelPojazdu;
+            return "GS";
         }
     }
 }

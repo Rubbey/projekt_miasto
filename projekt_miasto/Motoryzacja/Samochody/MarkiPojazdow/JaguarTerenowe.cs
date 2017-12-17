@@ -7,18 +7,15 @@ using System.Threading.Tasks;
 
 namespace projekt_miasto.Motoryzacja.Samochody.MarkiPojazdow
 {
-    abstract class JaguarTerenowe : SamochodyTerenowe, IInformacje
+    abstract class JaguarTerenowe : SamochodyTerenowe
     {
-        public string MarkaPozadzu { get; private set; }
-
-        public JaguarTerenowe()
+        public JaguarTerenowe() : base()
         {
-            this.MarkaPozadzu = "Jaguar";
         }
 
         public override string Marka()
         {
-            return this.MarkaPozadzu;
+            return "Jaguar";
         }
 
     }

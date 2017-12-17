@@ -1,4 +1,5 @@
 ﻿using projekt_miasto.Motoryzacja.Samochody.MarkiPojazdow;
+using projekt_miasto.Motoryzacja.Silniki;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,18 +8,17 @@ using System.Threading.Tasks;
 
 namespace projekt_miasto.Motoryzacja.Samochody.ModelePojazdow
 {
-    class JaguarXF : JaguarOsobowe, IInformacje
+    class JaguarXF : JaguarOsobowe
     {
-        public string ModelPojazdu { get; private set; }
-
-        public JaguarXF()
+        public JaguarXF() : base()
         {
-            this.ModelPojazdu = "XF";
+            base.Silnik = new SilnikBenzynowy(4.1);
+            base.ZbiornikPaliwa = new ZbiornikPaliwa(90);
         }
 
         public override string Model()
         {
-            return this.ModelPojazdu;
+            return "XF";
         }
     }
 }

@@ -79,16 +79,21 @@
     <Compile Include="Toolbox.cs" />
     <Compile Include="Zwierzaki\Kot.cs" />
     <Compile Include="Zwierzaki\Pies.cs" />
+    <Compile Include="Zwierzaki\RasyKotow\Bengalski.cs" />
+    <Compile Include="Zwierzaki\RasyKotow\MineCoon.cs" />
+    <Compile Include="Zwierzaki\RasyKotow\NorweskiLesny.cs" />
+    <Compile Include="Zwierzaki\RasyKotow\Syberyjski.cs" />
+    <Compile Include="Zwierzaki\RasyPsow\BuldogFrancuski.cs" />
     <Compile Include="Zwierzaki\RasyPsow\Jamnik.cs" />
+    <Compile Include="Zwierzaki\RasyPsow\Labrador.cs" />
+    <Compile Include="Zwierzaki\RasyPsow\York.cs" />
     <Compile Include="Zwierzatko.cs" />
     <Compile Include="Zwierzyniec.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Zwierzaki\RasyKotow\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -6,21 +6,22 @@ using System.Threading.Tasks;
 
 namespace projekt_miasto.Zwierzaki
 {
-    class Kot : Zwierzatko
+    abstract class Kot : Zwierzatko
     {
         public override string GatunekZwierzatka()
         {
-            return "ssak";
+            return "Kot";
         }
 
         public override void NiechZwierzCosPowie()
         {
-            Console.WriteLine("Miaaaallll...");
+            Console.WriteLine("Dej mje zrec!! Miaaallll!!!!");
         }
 
-        public override string RasaZwierzaka()        
+        public Kot(string imie, int wiek): base(imie, wiek)
         {
-            return "Kot";
-        }   
+
+        }
+
     }
 }

@@ -14,13 +14,15 @@ namespace projekt_miasto
         static void Main(string[] args)
         {
             Zwierzyniec.Instancja().DodajZwierzatko(new Zwierzaki.RasyPsow.Jamnik("Zenon", 10));
+            Zwierzyniec.Instancja().DodajZwierzatko(new Zwierzaki.RasyKotow.Syberyjski("Mietek", 90));
+            Zwierzyniec.Instancja().DodajZwierzatko(new Zwierzaki.RasyPsow.York("Fifi", 1));
             Zwierzyniec.Instancja().WyswietlInformacje();
 
-            Osoba osoba = new projekt_miasto.Osoba("Jacek", "K.");
-            osoba.AdoptujZwierza(Zwierzyniec.Instancja().PobierzZwierzatko(0));
-            osoba.WyswietlInformacje();
+            //Osoba osoba = new projekt_miasto.Osoba("Jacek", "K.");
+            //osoba.AdoptujZwierza(Zwierzyniec.Instancja().PobierzZwierzatko(0));
+            //osoba.WyswietlInformacje();
 
-            Zwierzyniec.Instancja().WyswietlInformacje();
+            //Zwierzyniec.Instancja().WyswietlInformacje();
 
             //Osoba Ja = Osoba.StworzOsobe(); 
             //Ja.KupPojazd(new BMWX5());
