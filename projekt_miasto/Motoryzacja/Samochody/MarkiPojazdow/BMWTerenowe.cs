@@ -7,18 +7,15 @@ using System.Threading.Tasks;
 
 namespace projekt_miasto.Motoryzacja.Samochody.MarkiPojazdow
 {
-    abstract class BmwTerenowe : SamochodyTerenowe, IInformacje
+    abstract class BmwTerenowe : SamochodyTerenowe
     {
-        public string MarkaPozadzu { get; private set; }
-
         public BmwTerenowe() : base()
         {
-            this.MarkaPozadzu = "BMW";
         }
 
         public override string Marka()
         {
-            return this.MarkaPozadzu;
+            return "BMW";
         }
 
     }

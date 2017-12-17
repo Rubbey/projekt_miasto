@@ -8,23 +8,15 @@ namespace projekt_miasto.Motoryzacja.Silniki
 {
     class SilnikParowy : Silnik
     {
-        public string RodzajSilnika { get; private set; }
-
-        public SilnikParowy() : base()
+        public SilnikParowy(double pojemnoscSilnika) : base(pojemnoscSilnika)
         {
-            this.RodzajSilnika = "Silnik Parowy";
         }
 
         public override string TypSilnika()
         {
-            return this.RodzajSilnika;
+            return "Silnik parowy";
         }
 
-        public override void WyswietlInformacje()
-        {
-            Console.WriteLine("Typ silnika: {0},", this.RodzajSilnika);
-            base.WyswietlInformacje();
-        }
     }
 }
 

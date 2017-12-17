@@ -33,7 +33,7 @@ namespace projekt_miasto
             while (i_indeksPojazdu < 0 || i_indeksPojazdu >= Samochody.Count)
             {
                 Console.WriteLine("Nie ma Pojazdu o podanym indeksie!");
-                SprzedajPojazd(Toolbox.inputInteger("Podaj indeks Pojazdu", 0, Samochody.Count));
+                SprzedajPojazd(Toolbox.inputInteger("Podaj indeks Pojazdu", 0, Samochody.Count-1));
             }
 
             Pojazd TempPojazd = Samochody.ElementAt(i_indeksPojazdu);

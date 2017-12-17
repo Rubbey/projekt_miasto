@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace projekt_miasto.Motoryzacja.Samochody.TypyPojazdow
 {
-    abstract class Jednoslady : Pojazd, IInformacje
+    abstract class Jednoslady : Pojazd
     {
         public Jednoslady() : base(1) { }
     }

@@ -8,22 +8,14 @@ namespace projekt_miasto.Motoryzacja.Silniki
 {
     class SilnikBenzynowy : Silnik
     {
-        public string RodzajSilnika { get; private set; }
-
-        public SilnikBenzynowy() : base()
+        public SilnikBenzynowy(double pojemnoscSilnia) : base(pojemnoscSilnia)
         {
-            this.RodzajSilnika = "Silnik Benzynowy";
         }
 
         public override string TypSilnika()
         {            
-            return this.RodzajSilnika;
+            return "Silnik benzynowy";
         }
 
-        public override void WyswietlInformacje()
-        {
-            Console.WriteLine("Typ silnika: {0},", this.RodzajSilnika);
-            base.WyswietlInformacje();
-        }
     }
 }

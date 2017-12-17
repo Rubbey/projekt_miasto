@@ -13,15 +13,24 @@ namespace projekt_miasto.Motoryzacja
         public double ZuzyciePaliwa { get; private set; }
 
         //tutaj jak zwykle powinny znaleźć się odpowiednie konstruktory - silnik musi mieć pojemność i jakąś startową wartość kilometrów
+        /*
         public Silnik()
         {
             LiczbaPrzejechanychKilometrow = Toolbox.inputInteger("Podaj aktualny przebieg silnika w km: ", 0, int.MaxValue);
             PojemnoscSilnika = Toolbox.inputDouble("Podaj pojemnosc silnika: ", 0.7f, 25.0f);
             ZuzyciePaliwa = (PojemnoscSilnika * 2.5f)/100;
         }
+        */
+        public Silnik(double pojemnoscSilnika)
+        {
+            this.PojemnoscSilnika = pojemnoscSilnika;
+            this.LiczbaPrzejechanychKilometrow = 0;
+            this.ZuzyciePaliwa = (PojemnoscSilnika * 2.5) / 100.0;
+        }
 
         public virtual void WyswietlInformacje()
         {
+            Console.WriteLine("Typ silnika = {0}", this.TypSilnika());
             Console.WriteLine("Pojemnosc: {0}\t Przebieg: {1}\t Zuzycie paliwa: {2}",this.PojemnoscSilnika, this.LiczbaPrzejechanychKilometrow, this.ZuzyciePaliwa);
         }
         //ta metoda wyświetli informację o instancji silnika

@@ -12,10 +12,16 @@ namespace projekt_miasto.Motoryzacja
         public long IloscPaliwa { get; private set; }
 
         //tutaj klasycznie odpowiedni konstruktor
-
+        /*
         public ZbiornikPaliwa()
         {
             MaksymalnaIloscPaliwa = Toolbox.inputInteger("Podaj pojemność zbiornika paliwa w litrach: ", 1, 1000);
+            IloscPaliwa = 0;
+        }*/
+
+        public ZbiornikPaliwa(long maxPaliwa )
+        {
+            MaksymalnaIloscPaliwa = maxPaliwa;
             IloscPaliwa = 0;
         }
 

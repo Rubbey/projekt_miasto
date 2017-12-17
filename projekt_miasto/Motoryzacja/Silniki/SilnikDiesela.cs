@@ -8,22 +8,14 @@ namespace projekt_miasto.Motoryzacja.Silniki
 {
     class SilnikDiesela : Silnik
     {
-        public string RodzajSilnika { get; private set; }
-
-        public SilnikDiesela() : base()
+        public SilnikDiesela(double pojemnoscSilnika) : base(pojemnoscSilnika)
         {
-            this.RodzajSilnika = "Silnik Diesela";
         }
 
         public override string TypSilnika()
         {
-            return this.RodzajSilnika;
+            return this.GetType().Name;
         }
 
-        public override void WyswietlInformacje()
-        {
-            Console.WriteLine("Typ silnika: {0},", this.RodzajSilnika);
-            base.WyswietlInformacje();
-        }
     }
 }

@@ -66,6 +66,18 @@ namespace projekt_miasto.Motoryzacja
         {
             //ta metoda wyświetli informację o pojezdzie
             Console.WriteLine("Rodzaj pojazdu: {0}",this.Rodzaj);
+            Console.WriteLine("Marka: {0}", this.Marka());
+            Console.WriteLine("Model: {0}", this.Model());
+
+            if (Silnik != null)
+            {
+                Silnik.WyswietlInformacje();
+            }
+
+            if (ZbiornikPaliwa != null)
+            {
+                ZbiornikPaliwa.WyswietlInformacje();
+            }
         }
         public abstract string Marka();
         public abstract string Model();

@@ -8,20 +8,17 @@ using System.Threading.Tasks;
 
 namespace projekt_miasto.Motoryzacja.Samochody.ModelePojazdow
 {
-    class BMWX5 : BmwTerenowe, IInformacje
+    class BMWX5 : BmwTerenowe
     {
-        public string ModelPojazdu { get; private set; }
-
         public BMWX5() : base()
         {
-            this.ModelPojazdu = "X5";
-            base.Silnik = new SilnikBenzynowy();
-            base.ZbiornikPaliwa = new ZbiornikPaliwa();
+            base.Silnik = new SilnikBenzynowy(5);
+            base.ZbiornikPaliwa = new ZbiornikPaliwa(100);
         }
 
         public override string Model()
         {
-            return this.ModelPojazdu;
+            return "X5";
         }
     }
 }

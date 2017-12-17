@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace projekt_miasto.Motoryzacja.Samochody.TypyPojazdow
 {
-    abstract class SamochodyCiezarowe : Pojazd, IInformacje
+    abstract class SamochodyCiezarowe : Pojazd
     {
         public SamochodyCiezarowe() : base(4) { }
     }

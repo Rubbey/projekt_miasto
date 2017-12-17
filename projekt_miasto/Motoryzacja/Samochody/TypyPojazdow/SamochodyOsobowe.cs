@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace projekt_miasto.Motoryzacja.Samochody.TypyPojazdow
 {
-    abstract class SamochodyOsobowe : Pojazd, IInformacje
+    abstract class SamochodyOsobowe : Pojazd
     {
-        public SamochodyOsobowe() : base(2) { }        
+        public SamochodyOsobowe() : base(2)
+        {
+        }        
     }
 }
