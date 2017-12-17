@@ -21,7 +21,6 @@ namespace projekt_miasto.Motoryzacja
         public RodzajPojazdu Rodzaj { get; private set; }
 
 
-        //tutaj jak zwykle powinny znaleźć się odpowiednie konstruktory - proszę zbudować je sprytnie, pytanie czy tutaj musimy już inicjować obiekty ZbiornikPaliwa i Silnik, czy zrobić to np. w klasach potomnych
         public Pojazd()
         {
             UstawRodzajPojazdu(0);
@@ -64,7 +63,6 @@ namespace projekt_miasto.Motoryzacja
 
         public virtual void WyswietlInformacje()
         {
-            //ta metoda wyświetli informację o pojezdzie
             Console.WriteLine("Rodzaj pojazdu: {0}",this.Rodzaj);
             Console.WriteLine("Marka: {0}", this.Marka());
             Console.WriteLine("Model: {0}", this.Model());
@@ -83,7 +81,7 @@ namespace projekt_miasto.Motoryzacja
         public abstract string Model();
 
         public virtual long JedziemyWSinaDal(long liczbaKilometrow)
-        //metoda powinna odwołać się do obiektu Silnik i odpowiednio na nim zadziałać by przejechać zadaną liczbę kilometrów
+        
         {
             if (this.Silnik != null)
             {

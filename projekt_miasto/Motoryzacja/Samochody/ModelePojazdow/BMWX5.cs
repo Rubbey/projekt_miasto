@@ -12,7 +12,7 @@ namespace projekt_miasto.Motoryzacja.Samochody.ModelePojazdow
     {
         public BMWX5() : base()
         {
-            base.Silnik = new SilnikBenzynowy(5);
+            base.Silnik = new SilnikBenzynowy(3.2);
             base.ZbiornikPaliwa = new ZbiornikPaliwa(100);
         }
 

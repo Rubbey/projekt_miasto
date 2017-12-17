@@ -11,16 +11,17 @@ namespace projekt_miasto
     {
         public enum RodzajZwierzatka
         {
-            DOMOWE = 0x0001,
-            HODOWLANE = 0x0002,
-            BRAK_DANYCH = 0x0000
+            DOMOWE = 1,
+            HODOWLANE = 2,
+            BRAK_DANYCH = 0
         };
 
         public string Imie { get; private set; }
         public int Wiek { get; private set; }
-        public RodzajZwierzatka Rodzaj { get; private set; }       
+        public RodzajZwierzatka Rodzaj { get; private set; }
+        public string Rasa { get; private set; }       
 
-        public Zwierzatko()     //tutaj powinny znaleźć sie odpowiednie konstruktory
+        public Zwierzatko()
         {
             this.Rodzaj = RodzajZwierzatka.BRAK_DANYCH;
             this.UstawDane(Toolbox.BRAK_DANYCH, 0);
@@ -53,10 +54,7 @@ namespace projekt_miasto
             else this.Wiek = Toolbox.inputInteger("Podaj wiek: ", 0, 99);
         }
 
-        /*
-            metody abstrakcyjne nie posiadają w klasie , w której zostały zdefioniowane swoich deklaracji - jedynie nagłówek
-            każda klasa, która będzie dziedziczyła z klasy bazowej musi posiadać implementacje tych metod
-        */
+        
 
         public abstract string GatunekZwierzatka();
         public abstract string RasaZwierzaka();
@@ -64,8 +62,8 @@ namespace projekt_miasto
 
         public virtual void WyswietlInformacje()
         {
-            Console.WriteLine("Imię: {0}\nWiek: {1}\nRodzaj: {2}\nGatunek: {3}\nRasa: {4}", this.Imie, this.Wiek, this.Rodzaj);
+            Console.WriteLine("Imię: {0}\nWiek: {1}\nRodzaj: {2}\nGatunek: {3}\nRasa: {4}", this.Imie, this.Wiek, this.Rodzaj, this.RasaZwierzaka());
         }
-        //ta metoda moze wyswietlic podstawowe informacje o zwierzaku
+        
     }
 }
