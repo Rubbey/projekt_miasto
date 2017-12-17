@@ -79,6 +79,7 @@
     <Compile Include="Toolbox.cs" />
     <Compile Include="Zwierzaki\Kot.cs" />
     <Compile Include="Zwierzaki\Pies.cs" />
+    <Compile Include="Zwierzaki\RasyPsow\Jamnik.cs" />
     <Compile Include="Zwierzatko.cs" />
     <Compile Include="Zwierzyniec.cs" />
   </ItemGroup>
@@ -86,7 +87,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Zwierzaki\RasyPsow\" />
+    <Folder Include="Zwierzaki\RasyKotow\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

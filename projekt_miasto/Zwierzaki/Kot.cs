@@ -6,21 +6,21 @@ using System.Threading.Tasks;
 
 namespace projekt_miasto.Zwierzaki
 {
-    class Kot : Zwierzatko, IInformacje
+    class Kot : Zwierzatko
     {
         public override string GatunekZwierzatka()
         {
-            throw new NotImplementedException();
+            return "ssak";
         }
 
         public override void NiechZwierzCosPowie()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Miaaaallll...");
         }
 
-        public override string RasaZwierzaka()
+        public override string RasaZwierzaka()        
         {
-            throw new NotImplementedException();
-        }
+            return "Kot";
+        }   
     }
 }

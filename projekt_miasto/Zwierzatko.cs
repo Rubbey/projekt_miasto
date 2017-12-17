@@ -18,8 +18,7 @@ namespace projekt_miasto
 
         public string Imie { get; private set; }
         public int Wiek { get; private set; }
-        public RodzajZwierzatka Rodzaj { get; private set; }
-        public string Rasa { get; private set; }       
+        public RodzajZwierzatka Rodzaj { get; private set; }              
 
         public Zwierzatko()
         {
@@ -44,8 +43,8 @@ namespace projekt_miasto
             else this.Imie = Toolbox.inputString("Podaj imie: ", false);            
         }
 
-        public void UstawDane(string imie, int wiek)                             //metoda UstawDane powinna być przeciążona dla kilku wariantów argumentów
-                                                                                 //dodatkowo powinna zawierać sprawdzenia poprawności wprowadzanych danych
+        public void UstawDane(string imie, int wiek) 
+        
         {
             if (!string.IsNullOrEmpty(imie)) this.Imie = imie;
             else this.Imie = Toolbox.inputString("Podaj imie: ", false);
@@ -62,7 +61,7 @@ namespace projekt_miasto
 
         public virtual void WyswietlInformacje()
         {
-            Console.WriteLine("Imię: {0}\nWiek: {1}\nRodzaj: {2}\nGatunek: {3}\nRasa: {4}", this.Imie, this.Wiek, this.Rodzaj, this.RasaZwierzaka());
+            Console.WriteLine("Imię: {0}\nWiek: {1}\nRodzaj: {2}\nGatunek: {3}\nRasa: {4}", this.Imie, this.Wiek, this.Rodzaj, this.GatunekZwierzatka(), this.RasaZwierzaka());
         }
         
     }
