@@ -40,20 +40,17 @@ namespace projekt_miasto
         public void UstawDane(string imie)
         {
             if (!string.IsNullOrEmpty(imie)) this.Imie = imie;
-            else this.Imie = Toolbox.inputString("Podaj imie: ", false);            
+            else this.Imie = "Ten zwierzk nie posiada jeszcze imienia! :(";
         }
 
-        public void UstawDane(string imie, int wiek) 
-        
+        public void UstawDane(string imie, int wiek)         
         {
             if (!string.IsNullOrEmpty(imie)) this.Imie = imie;
-            else this.Imie = Toolbox.inputString("Podaj imie: ", false);
+            else this.Imie = "Ten zwierzk nie posiada jeszcze imienia! :(";
 
             if (wiek >= 0 && wiek <= 99) this.Wiek = wiek;
-            else this.Wiek = Toolbox.inputInteger("Podaj wiek: ", 0, 99);
-        }
-
-        
+            else throw new ArgumentOutOfRangeException();
+        }        
 
         public abstract string GatunekZwierzatka();
         public abstract string RasaZwierzaka();
@@ -61,7 +58,7 @@ namespace projekt_miasto
 
         public virtual void WyswietlInformacje()
         {
-            Console.WriteLine("Imię: {0}\nWiek: {1}\nRodzaj: {2}\nGatunek: {3}\nRasa: {4}", this.Imie, this.Wiek, this.Rodzaj, this.GatunekZwierzatka(), this.RasaZwierzaka());
+            Console.WriteLine("Imię: {0}\tWiek: {1}\nGatunek: {2}\tRasa: {3}\nRodzaj: {4}\n--------------------------", this.Imie, this.Wiek, this.GatunekZwierzatka(), this.RasaZwierzaka(), this.Rodzaj);
         }
         
     }

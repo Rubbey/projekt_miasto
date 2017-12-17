@@ -101,7 +101,6 @@ namespace projekt_miasto
                                   Toolbox.inputString("Podaj miasto: ", false),
                                   Toolbox.inputPostCode("Podaj kod pocztowy: ", false),
                                   Toolbox.inputInteger("Podaj nr domu: ", 1, int.MaxValue));
-
             return result;
         }
 
@@ -112,8 +111,8 @@ namespace projekt_miasto
 
             foreach (Zwierzatko zwierz in mojeZwierzak)
             {
-                zwierz.WyswietlInformacje();
                 zwierz.NiechZwierzCosPowie();
+                zwierz.WyswietlInformacje();                
             }
         }
 
@@ -124,6 +123,5 @@ namespace projekt_miasto
                 mojeZwierzak.Add(zwierz);
             }
         }
-
     }
 }
