@@ -23,6 +23,8 @@ namespace projekt_miasto
 
             Zwierzyniec.Instancja().WyswietlInformacje();
 
+            //test1
+
             //Osoba Ja = Osoba.StworzOsobe(); 
             //Ja.KupPojazd(new BMWX5());
             //Ja.Samochody.ElementAt(0).ZbiornikPaliwa.Dotankuj();
