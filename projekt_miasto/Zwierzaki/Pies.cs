@@ -17,6 +17,11 @@ namespace projekt_miasto.Zwierzaki
         {
             Console.WriteLine("Wooff! Woooff!");
         }
+
+        public Pies(string imie, int wiek): base(imie, wiek)
+        {
+
+        }
         
     }
 }

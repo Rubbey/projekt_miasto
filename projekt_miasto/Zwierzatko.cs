@@ -18,7 +18,7 @@ namespace projekt_miasto
 
         public string Imie { get; private set; }
         public int Wiek { get; private set; }
-        public RodzajZwierzatka Rodzaj { get; private set; }              
+        public RodzajZwierzatka Rodzaj { get; protected set; }              
 
         public Zwierzatko()
         {

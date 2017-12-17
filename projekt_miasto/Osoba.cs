@@ -22,6 +22,7 @@ namespace projekt_miasto
         public Adres Adres { get; private set; }
 
         public List<Pojazd> Samochody = new List<Pojazd>();
+        public List<Zwierzatko> mojeZwierzak = new List<Zwierzatko>();
 
         public void KupPojazd(Pojazd pojazd)
         {
@@ -108,6 +109,20 @@ namespace projekt_miasto
         {
             Console.WriteLine("Imie = {0} Nazwisko = {1}", this.Imie, this.Nazwisko);
             this.Adres.WyswietlInformacje();
+
+            foreach (Zwierzatko zwierz in mojeZwierzak)
+            {
+                zwierz.WyswietlInformacje();
+                zwierz.NiechZwierzCosPowie();
+            }
+        }
+
+        public virtual void AdoptujZwierza ( Zwierzatko zwierz)
+        {
+            if (zwierz != null)
+            {
+                mojeZwierzak.Add(zwierz);
+            }
         }
 
     }

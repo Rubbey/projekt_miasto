@@ -8,25 +8,32 @@ namespace projekt_miasto
 {
     class Zwierzyniec : IInformacje
     {
-        private static Zwierzyniec o_instancja;
+        private static Zwierzyniec o_instancja = null;
         private List<Zwierzatko> o_listaZwierzatek;
 
         //tutaj powinny znaleźć sie odpowiedni konstruktor
-        private Zwierzyniec()
+        public Zwierzyniec()
         {
-            Zwierzyniec o_instancja = new Zwierzyniec();
+            o_listaZwierzatek = new List<Zwierzatko>();
         }
 
         public static Zwierzyniec Instancja()
         {
-            if (o_instancja == null) new Zwierzyniec();
+            if (o_instancja == null)
+            {
+                o_instancja = new Zwierzyniec();
+            }
             return o_instancja;
         }
         //statyczna funkcja, ktora powinna w odpowiedni sposob (jeśli to wymagane) zainicjować instancję klasy Zwierzyniec/lub zwrócić już zainicjowaną
 
         public Zwierzatko DodajZwierzatko(Zwierzatko o_zwierzatko)
         {
-            o_listaZwierzatek.Add(o_zwierzatko);
+            if (o_zwierzatko != null)
+            {
+                o_listaZwierzatek.Add(o_zwierzatko);
+            }
+            
             return o_zwierzatko;
         }
         //metoda dodaje zwierzaka przekazanego jako argument
@@ -51,6 +58,7 @@ namespace projekt_miasto
             foreach (Zwierzatko Zwierz in o_listaZwierzatek)
             {
                 Console.WriteLine("Nr: {0}\t Zwierzak: {1}", o_listaZwierzatek.IndexOf(Zwierz), Zwierz.Imie);
+                Zwierz.WyswietlInformacje();
             }                        
         }
         //ta metoda wyświetli listę dostępnych zwierzaków z informacją o indeksie, pod którym zwierzak występuje

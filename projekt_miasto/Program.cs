@@ -13,10 +13,19 @@ namespace projekt_miasto
     {
         static void Main(string[] args)
         {
-            Osoba Ja = Osoba.StworzOsobe(); 
-            Ja.KupPojazd(new BMWX5());
-            Ja.Samochody.ElementAt(0).ZbiornikPaliwa.Dotankuj();
-            Ja.Samochody.ElementAt(0).JedziemyWSinaDal();
+            Zwierzyniec.Instancja().DodajZwierzatko(new Zwierzaki.RasyPsow.Jamnik("Zenon", 10));
+            Zwierzyniec.Instancja().WyswietlInformacje();
+
+            Osoba osoba = new projekt_miasto.Osoba("Jacek", "K.");
+            osoba.AdoptujZwierza(Zwierzyniec.Instancja().PobierzZwierzatko(0));
+            osoba.WyswietlInformacje();
+
+            Zwierzyniec.Instancja().WyswietlInformacje();
+
+            //Osoba Ja = Osoba.StworzOsobe(); 
+            //Ja.KupPojazd(new BMWX5());
+            //Ja.Samochody.ElementAt(0).ZbiornikPaliwa.Dotankuj();
+            //Ja.Samochody.ElementAt(0).JedziemyWSinaDal();
 
             Console.ReadLine();
         }
