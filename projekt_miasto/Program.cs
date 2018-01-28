@@ -23,7 +23,7 @@ namespace projekt_miasto
 
             Zwierzyniec.Instancja().WyswietlInformacje();
 
-            //test1
+            // test1
 
             //Osoba Ja = Osoba.StworzOsobe(); 
             //Ja.KupPojazd(new BMWX5());
