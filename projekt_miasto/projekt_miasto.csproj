@@ -47,6 +47,7 @@
   <ItemGroup>
     <Compile Include="Adres.cs" />
     <Compile Include="IInformacje.cs" />
+    <Compile Include="Menu.cs" />
     <Compile Include="Miasto.cs" />
     <Compile Include="Motoryzacja\Pojazd.cs" />
     <Compile Include="Motoryzacja\Samochody\MarkiPojazdow\BmwMotocykle.cs" />

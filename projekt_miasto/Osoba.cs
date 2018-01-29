@@ -16,7 +16,7 @@ namespace projekt_miasto
             BRAK_DANYCH = 0x0000
         };
 
-        public string Imie { get;  private set ;}
+        public string Imie { get; private set; }
         public string Nazwisko { get; private set; }
         public RodzajPlci Plec { get; private set; }
         public Adres Adres { get; private set; }
@@ -94,7 +94,7 @@ namespace projekt_miasto
 
             Console.WriteLine("=== wprowadz dane nowej osoby ===");
 
-            result.UstawDane(Toolbox.inputString("Podaj imie: ", true),
+            result.UstawDane(Toolbox.inputString("Podaj imie: ", false),
                             Toolbox.inputString("Podaj nazwisko: ", false));
 
             result.Adres.UstawDane(Toolbox.inputString("Podaj ulice: ", false),

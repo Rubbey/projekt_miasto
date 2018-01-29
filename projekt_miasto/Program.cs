@@ -13,15 +13,20 @@ namespace projekt_miasto
     {
         static void Main(string[] args)
         {
-            Zwierzyniec.Instancja().DodajZwierzatko(new Zwierzaki.RasyPsow.Jamnik("Zenon", 10));
-            Zwierzyniec.Instancja().DodajZwierzatko(new Zwierzaki.RasyKotow.Syberyjski("Mietek", 90));
-            Zwierzyniec.Instancja().DodajZwierzatko(new Zwierzaki.RasyPsow.York("Fifi", 1));
 
-            Osoba osoba = new projekt_miasto.Osoba("Jacek", "K.");
-            osoba.AdoptujZwierza(Zwierzyniec.Instancja().PobierzZwierzatko(0));
-            osoba.WyswietlInformacje();
+            
+            Menu.StartMenu();
 
-            Zwierzyniec.Instancja().WyswietlInformacje();
+            //Zwierzyniec.Instancja().DodajZwierzatko(new Zwierzaki.RasyPsow.Jamnik("Zenon", 10));
+            //Zwierzyniec.Instancja().DodajZwierzatko(new Zwierzaki.RasyKotow.Syberyjski("Mietek", 90));
+            //Zwierzyniec.Instancja().DodajZwierzatko(new Zwierzaki.RasyPsow.York("Fifi", 1));
+
+
+            
+            //osoba.AdoptujZwierza(Zwierzyniec.Instancja().PobierzZwierzatko(0));
+            //osoba.WyswietlInformacje();
+
+            //Zwierzyniec.Instancja().WyswietlInformacje();
 
             //test1
 
